@@ -3,8 +3,8 @@ A fake two-factor authentication module for dsjas.
 Your passcode is at least 6 digits and ending with zero.
 
 To install:
-Go to your DSJAS admin dashboard and upload the zip URL address:
+Go to your DSJAS admin dashboard under modules and upload the zip:
 ```
-https://github.com/SinisterSpatula/DSJAS-two_factor_auth/raw/main/two_factor_auth.zip
+https://github.com/SinisterSpatula/DSJAS-two_factor_auth/archive/refs/heads/main.zip
 ```
 
