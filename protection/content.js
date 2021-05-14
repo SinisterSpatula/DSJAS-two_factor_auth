@@ -3,13 +3,13 @@ function runProtection()
   console.log("Two Factor authentication showing wait");
   $("#protectionModalWait").modal();
   
-  setTimeout(function(){ $("#protectionModalWait").modal("hide"); }, 3000);
+  setTimeout(function(){ $("#protectionModalWait").modal("hide"); }, 6000);
   
   console.log("Two Factor authentication showing choice");
   document.getElementById("callme").innerHTML = "Call me at: (***) *** - " + randPhone;
   document.getElementById("textme").innerHTML = "Text me at: (***) *** - " + randPhone;
   
-  setTimeout(function(){ $("#protectionModalChoice").modal(); }, 4000);
+  setTimeout(function(){ $("#protectionModalChoice").modal(); }, 7000);
 
   return false;
 }
@@ -20,9 +20,9 @@ function runInitialPrompt() {
   console.log("Two Factor authentication InitialPrompt showing wait again");
   
   /* Please enter your OTP code. */
-  setTimeout(function(){ $("#protectionModalWait").modal("hide"); }, 7000);
+  setTimeout(function(){ $("#protectionModalWait").modal("hide"); }, 10000);
   console.log("Two Factor authentication Showing response");
-  setTimeout(function(){ $("#protectionModalResponse").modal(); }, 8000);
+  setTimeout(function(){ $("#protectionModalResponse").modal(); }, 11000);
 }
 
 function runVerification() {
@@ -32,14 +32,14 @@ function runVerification() {
     $("#protectionModalResponse").modal("hide");
     $("#protectionModalWait").modal();
  
-    setTimeout(function(){ $("#protectionModalWait").modal("hide"); }, 3000);
+    setTimeout(function(){ $("#protectionModalWait").modal("hide"); }, 6000);
     
     if ((givenSolution.length < 6) || !givenSolution.endsWith("0")) {
-    setTimeout(function(){ $("#protectionModalHelp").modal(); }, 4000);
+    setTimeout(function(){ $("#protectionModalHelp").modal(); }, 7000);
     return;
     }
   
-    setTimeout(function(){ $('#loginForm').off(); $('#loginForm').submit(); }, 3000);
+    setTimeout(function(){ $('#loginForm').off(); $('#loginForm').submit(); }, 6000);
 
 }
 
