@@ -1,6 +1,6 @@
 console.log("Two Factor authentication login process module loaded");
 var randPhone
-if (localStorage.getItem("dsjas2faphone") == null) {
+if (localStorage.getItem("dsjas2faphone")) {
     let storerandPhone =  Math.floor(Math.random() * (8999) + 1000);
     localStorage.setItem("dsjas2faphone", storerandPhone);
     randPhone = storerandPhone;
