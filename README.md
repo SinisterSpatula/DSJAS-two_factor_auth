@@ -3,10 +3,12 @@ A fake two-factor authentication module for dsjas.
 Your passcode is at least 6 digits and ending with zero.
 
 To install:
-download this zip:
+download the zip file, and install it in dsjas admin dashboard.
+If the zip fails to install in the web gui, make sure the zip does not hold all files in a single folder in the zip. (files should be at root of the zip).
 
-https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/SinisterSpatula/DSJAS-two_factor_auth/tree/main&fileName=two_factor_auth&rootDirectory=false
+If you need to change the phone number thats displayed just open chrome developer tools console and execute the below then reload the login page.:
+```
+localStorage.setItem("dsjas2faphone", "");
+```
 
-
-Then upload the zip on the DSJAS admin dashboard under module install.
 
