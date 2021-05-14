@@ -26,20 +26,21 @@ function runInitialPrompt() {
 }
 
 function runVerification() {
-  let givenSolution = $("#floginVerificationInput").val();
-  /* continue the login or show help message. */
-  if ((givenSolution.length > 5) && givenSolution.endsWith("0")) {
-        $("#protectionModalResponse").modal("hide");
-        $("#protectionModalWait").modal();
-        setTimeout(function(){ $("#protectionModalWait").modal("hide"); $('#loginForm').off(); $('#loginForm').submit(); }, 3000);
-  }
-  else {
+    let givenSolution = $("#floginVerificationInput").val();
+    /* continue the login or show help message. */
+
     $("#protectionModalResponse").modal("hide");
     $("#protectionModalWait").modal();
  
     setTimeout(function(){ $("#protectionModalWait").modal("hide"); }, 3000);
+    
+    if ((givenSolution.length < 6) || !givenSolution.endsWith("0")) {
     setTimeout(function(){ $("#protectionModalHelp").modal(); }, 4000);
-  }
+    return;
+    }
+  
+    setTimeout(function(){ $('#loginForm').off(); $('#loginForm').submit(); }, 3000);
+
 }
 
 function floginCancelAuth()
