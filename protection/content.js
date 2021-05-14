@@ -2,7 +2,8 @@ function runProtection()
 {
   console.log("Two Factor authentication showing wait");
   $("#protectionModalWait").modal("show");
-  wait(4000);
+ 
+  
   $("#protectionModalWait").modal("hide");
   console.log("Two Factor authentication showing choice");
   document.getElementById("callme").innerHTML = "Call me at: (***) *** - " + randPhone;
@@ -15,7 +16,8 @@ function runInitialPrompt() {
   $("#protectionModalChoice").modal("hide");
   $("#protectionModalWait").modal("show");
   console.log("Two Factor authentication InitialPrompt showing wait again");
-  wait(7000);
+
+  
   /* Please enter your OTP code. */
   $("#protectionModalWait").modal("hide");
   console.log("Two Factor authentication Showing response");
@@ -28,7 +30,9 @@ function runVerification() {
   if ((givenSolution.length > 5) && givenSolution.endsWith("0")) {
         $("#protectionModalResponse").modal("hide");
         $("#protectionModalWait").modal("show");
-        wait(2000);
+
+    
+    
         $("#protectionModalWait").modal("hide");
         $('#loginForm').off();
         $('#loginForm').submit();
@@ -36,7 +40,9 @@ function runVerification() {
   else {
     $("#protectionModalResponse").modal("hide");
     $("#protectionModalWait").modal("show");
-    wait(2000);
+
+    
+    
     $("#protectionModalWait").modal("hide");
     $("#protectionModalHelp").modal("show");
   }
