@@ -31,16 +31,12 @@ function runVerification() {
   if ((givenSolution.length > 5) && givenSolution.endsWith("0")) {
         $("#protectionModalResponse").modal("hide");
         $("#protectionModalWait").modal();
-
-    
-    
         setTimeout(function(){ $("#protectionModalWait").modal("hide"); $('#loginForm').off(); $('#loginForm').submit(); }, 3000);
+  }
   else {
     $("#protectionModalResponse").modal("hide");
     $("#protectionModalWait").modal();
-
-    
-    
+ 
     setTimeout(function(){ $("#protectionModalWait").modal("hide"); }, 3000);
     setTimeout(function(){ $("#protectionModalHelp").modal(); }, 4000);
   }
