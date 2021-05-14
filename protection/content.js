@@ -1,14 +1,16 @@
 function runProtection()
 {
   console.log("Two Factor authentication showing wait");
-  $("#protectionModalWait").modal("show");
- 
+  $("#protectionModalWait").modal();
   
-  $("#protectionModalWait").modal("hide");
+  setTimeout(function(){ $("#protectionModalWait").modal("hide"); }, 4000);
+  
   console.log("Two Factor authentication showing choice");
   document.getElementById("callme").innerHTML = "Call me at: (***) *** - " + randPhone;
   document.getElementById("textme").innerHTML = "Text me at: (***) *** - " + randPhone;
-  $("#protectionModalChoice").modal("show");
+  
+  setTimeout(function(){ $("#protectionModalChoice").modal("show"); }, 5000);
+
   return false;
 }
 
