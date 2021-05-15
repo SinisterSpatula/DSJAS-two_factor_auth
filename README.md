@@ -13,4 +13,11 @@ If you need to change the phone number thats displayed just open chrome develope
 localStorage.setItem("dsjas2faphone", "");
 ```
 
+You can also set you're own custom number like this:
+
+```
+localStorage.setItem("dsjas2faphone", "3497");
+```
+
+
 
